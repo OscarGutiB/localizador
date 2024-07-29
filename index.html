@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja Registradora del Bar</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Caja Registradora del Bar</h1>
+        <div class="main-content">
+            <div class="main-panel">
+                <div class="buttons">
+                    <button class="item-button" data-item="Cerveza" data-price="2">Cerveza - 2€</button>
+                    <button class="item-button" data-item="Cali" data-price="4">Cali - 4€</button>
+                    <button class="item-button" data-item="Copa" data-price="6.5">Copa - 6.5€</button>
+                    <button class="item-button" data-item="Pincho" data-price="2">Pincho - 2€</button>
+                    <button class="item-button" data-item="Cerve+Pincho" data-price="3">Cerve+Pincho - 3€</button>
+                    <!-- Botones vacíos -->
+                    <button class="item-button" data-item="Refresco" data-price="3">Refresco - 3€</button>
+                    <button class="item-button" data-item="Agua" data-price="2">Agua - 2€</button>
+                    <button class="item-button" data-item="" data-price="">+</button>
+                    <button class="item-button" data-item="" data-price="">+</button>
+                    <button class="item-button" data-item="" data-price="">+</button>
+                    <button class="item-button" data-item="" data-price="">+</button>
+                    <button class="item-button" data-item="" data-price="">+</button>
+                </div>
+                <div class="payment-section">
+                    <label for="amountReceived">Monto recibido:</label>
+                    <input type="number" id="amountReceived" placeholder="Ingresa el monto recibido" step="0.01" min="0">
+                    <button id="calculateChange">Calcular Cambio</button>
+                    <h2>Cambio a devolver: €<span id="change">0.00</span></h2>
+                    <h2>Total diario recaudado: €<span id="dailyTotal">0.00</span></h2>
+                    <!-- Nuevo botón para añadir el total del pedido al total diario sin introducir cambio -->
+                    <button id="addTotalToDailyTotalNoChange">Añadir total al diario sin cambio</button>
+                </div>
+            </div>
+            <!-- Teclado numérico -->
+            <div class="numeric-keypad">
+                <button class="key" data-value="7">7</button>
+                <button class="key" data-value="8">8</button>
+                <button class="key" data-value="9">9</button>
+                <button class="key" data-value="4">4</button>
+                <button class="key" data-value="5">5</button>
+                <button class="key" data-value="6">6</button>
+                <button class="key" data-value="1">1</button>
+                <button class="key" data-value="2">2</button>
+                <button class="key" data-value="3">3</button>
+                <button class="key" data-value="0">0</button>
+                <button class="key" data-value=".">.</button>
+                <button class="key" data-action="clear">C</button>
+            </div>
+        </div>
+        <h2>Artículos</h2>
+        <ul id="itemList"></ul>
+        <h2>Total: €<span id="total">0.00</span></h2>
+        <button id="resetButton">Reset</button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
