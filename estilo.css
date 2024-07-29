@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(/img/CENADOR-1-de-1.jpg); /* Añadir la imagen de fondo */
+    background-size: cover; /* Ajustar la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    color: #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 900px; /* Ampliar el ancho del contenedor */
+    display: flex;
+    flex-direction: column; /* Para que los elementos estén en columna */
+    position: relative; /* Para que el teclado se posicione dentro del contenedor */
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.main-panel {
+    flex: 2; /* Ocupa el doble de espacio que el teclado numérico */
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas para más espacio */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.item-button, #resetButton, #addTotalToDailyTotal {
+    padding: 8px;
+    font-size: 14px; /* Tamaño de fuente reducido */
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; /* Altura fija para los botones */
+}
+
+.item-button:hover, #resetButton:hover, #addTotalToDailyTotal:hover {
+    background-color: #0056b3;
+}
+
+#resetButton {
+    background-color: #dc3545;
+    grid-column: span 4; /* Ocupa todo el ancho */
+}
+
+#resetButton:hover {
+    background-color: #c82333;
+}
+
+#addTotalToDailyTotal {
+    background-color: #28a745; /* Color verde para el botón de añadir al total diario */
+}
+
+#addTotalToDailyTotal:hover {
+    background-color: #218838;
+}
+
+.payment-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-section input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.payment-section button {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px; /* Tamaño de fuente reducido */
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment-section button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centrar el contenido verticalmente */
+    padding: 5px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.decrease-button {
+    padding: 2px 5px;
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.decrease-button:hover {
+    background-color: #c82333;
+}
+
+/* Teclado numérico */
+.numeric-keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 10px;
+    margin-left: 20px; /* Espacio entre el panel principal y el teclado */
+    width: 180px; /* Ancho reducido para el teclado */
+}
+
+.key {
+    padding: 15px; /* Relleno reducido */
+    font-size: 16px; /* Tamaño de fuente reducido */
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.key:hover {
+    background-color: #0056b3;
+}
+
+.key[data-action="clear"] {
+    background-color: #dc3545;
+}
+
+.key[data-action="clear"]:hover {
+    background-color: #c82333;
+}
